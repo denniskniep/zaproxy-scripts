@@ -16,6 +16,9 @@ def debug() {
 
     def script = new File(scriptFilePath)
     def scriptFunctions = evaluate(script)
+	if(scriptFunctions == null){
+        print "Do not forget to add the DebugFooter into the Script. 'return [...]'"
+    }
     return scriptFunctions
 }
 
